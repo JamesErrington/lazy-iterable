@@ -1,0 +1,7 @@
+node_modules
+coverage
+examples/output.txt
+
+dist/index.d.ts
+dist/index.esm.d.ts
+dist/index.esm.js

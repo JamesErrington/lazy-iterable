@@ -1,0 +1,64 @@
+{
+  "name": "@jderrington/lazy-iterable",
+  "version": "1.0.0",
+  "description": "A lazily evaluated iterable utility for both synchronous and asychronous operations",
+  "keywords": [
+    "asynchronous",
+    "eager",
+    "iterable",
+    "iterator",
+    "lazy",
+    "streams",
+    "strict"
+  ],
+  "engines": {
+    "node": "^10 || ^12 || ^14 || ^16"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "build": "npm run format && npm run lint && npm run build:code && npm run build:docs",
+    "build:code": "rm -rf /dist && rollup -c",
+    "build:docs": "typedoc",
+    "launch:docs": "xdg-open docs/index.html",
+    "launch:lcov": "xdg-open coverage/lcov-report/index.html",
+    "test": "jest test",
+    "prepublishOnly": "npm test && npm run build:code"
+  },
+  "author": "James Errington <james.errington@protonmail.com>",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamesErrington/lazy-iterable.git"
+  },
+  "bugs": "https://github.com/JamesErrington/lazy-iterable/issues",
+  "homepage": "https://jameserrington.github.io/lazy-iterable/",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@types/jest": "^26.0.22",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@wessberg/rollup-plugin-ts": "^1.3.14",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rollup": "^2.50.4",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "ts-jest": "^26.5.4",
+    "typedoc": "^0.20.34",
+    "typescript": "^4.2.3"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.esm.js",
+    "dist/index.d.ts"
+  ]
+}

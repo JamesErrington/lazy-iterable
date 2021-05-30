@@ -1,0 +1,27 @@
+{
+  "include": ["./src"],
+  "compilerOptions": {
+    "lib": ["ES2018", "DOM"],
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "sourceMap": false,
+    "removeComments": false,
+    "downlevelIteration": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs",
+    "readme": "./README.md",
+    "theme": "minimal",
+    "categoryOrder": ["Lazy", "Eager", "Conversion", "*"]
+  }
+}
